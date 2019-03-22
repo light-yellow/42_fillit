@@ -6,7 +6,7 @@
 #    By: bdudley <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/26 17:59:10 by bdudley           #+#    #+#              #
-#    Updated: 2019/03/09 20:50:03 by jgoyette         ###   ########.fr        #
+#    Updated: 2019/03/22 14:23:54 by jgoyette         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ $(NAME): $(OBJS)
 	make -C ./libft
 	gcc $(FLAGS) $(OBJS) $(LIB) -o $(NAME)
 
-.o: .c ./fillit.h
-	gcc $(FLAGS) -c $? -o $@
+%.o: %.c ./fillit.h
+	gcc $(FLAGS) -c $< -o $@
 
 clean:
 	make -C ./libft clean
