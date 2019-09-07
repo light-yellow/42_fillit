@@ -8,3 +8,54 @@ their most upper-left position, will be accepted.
 # Usage
 
 Run `make` to compile an executable called `fillit`. Then run the program with your input file: `./fillit [file]`.
+
+# Example 
+
+$> cat sample.fillit | cat -e
+...#$
+...#$
+...#$
+...#$
+$
+....$
+....$
+....$
+####$
+$
+.###$
+...#$
+....$
+....$
+$
+....$
+..##$
+.##.$
+....$
+$
+....$
+.##.$
+.##.$
+....$
+$
+....$
+....$
+##..$
+.##.$
+$
+##..$
+.#..$
+.#..$
+....$
+$
+....$
+###.$
+.#..$
+....$
+
+$> ./fillit sample.fillit | cat -e
+ABBBB.$
+ACCCEE$
+AFFCEE$
+A.FFGG$
+HHHDDG$
+.HDD.G$
